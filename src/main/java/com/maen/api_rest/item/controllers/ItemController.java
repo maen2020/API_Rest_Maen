@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/items")
+@RequestMapping("/api/v0/items")
 public class ItemController {
 
     private final ItemService service;

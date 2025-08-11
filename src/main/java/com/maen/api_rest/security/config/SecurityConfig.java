@@ -20,10 +20,9 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/items").permitAll()
-                .antMatchers(HttpMethod.GET, "/items/{id}").permitAll()
-                .antMatchers(HttpMethod.GET, "/items/search").permitAll()
-                .antMatchers(HttpMethod.POST, "/auth/login"). permitAll()
+                .antMatchers(HttpMethod.GET, "/api/v0/items").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/v0/items/search").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/v0/auth/login"). permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .oauth2ResourceServer(oauth2 -> oauth2.jwt())

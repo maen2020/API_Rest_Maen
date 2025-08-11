@@ -14,7 +14,7 @@ import java.security.Key;
 import java.util.Date;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/v0/auth")
 public class AuthController {
 
     @PostMapping("/login")
