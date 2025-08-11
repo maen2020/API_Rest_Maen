@@ -24,11 +24,11 @@ public class ItemController {
 
     @GetMapping()
     public ResponseEntity<List<ItemEntityDTO>> getAllItems() {
-        List<ItemEntity> entities = service.getAllItems(); //Devuelve la lista de entidades
+        List<ItemEntity> entities = service.getAllItems();
         List<ItemEntityDTO> dto = entities.stream()
-                .map(ItemEntityMapper::toDTO) //Convierte cada entidad a DTO
-                .collect(Collectors.toList()); //Recoge los DTOs en una lista
-        return ResponseEntity.ok(dto); //Devuelve la lista de DTOs
+                .map(ItemEntityMapper::toDTO)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(dto);
     }
 
     @GetMapping("/search")

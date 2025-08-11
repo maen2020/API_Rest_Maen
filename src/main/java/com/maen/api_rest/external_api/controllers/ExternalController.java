@@ -1,6 +1,6 @@
-package com.maen.api_rest.External_api.controllers;
+package com.maen.api_rest.external_api.controllers;
 
-import com.maen.api_rest.External_api.services.ExternalApiService;
+import com.maen.api_rest.external_api.services.ExternalApiService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

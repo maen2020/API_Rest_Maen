@@ -1,4 +1,4 @@
-package com.maen.api_rest.External_api.services;
+package com.maen.api_rest.external_api.services;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

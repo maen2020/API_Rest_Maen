@@ -3,14 +3,10 @@ package com.maen.api_rest.item.model.entities;
 import javax.persistence.*;
 import java.math.BigDecimal;
 
-@Entity // Indica que esta clase es una entidad JPA
-@Table(name = "item") // Especifica el nombre de la tabla en la base de datos
+@Entity
+@Table(name = "item")
 public class ItemEntity {
 
-    /*
-     * Atributos de la entidad(clase Item)
-     * GeneratedValue indica que la base de datos se encargará de generar el identificador único para cada entidad.
-     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,7 +16,6 @@ public class ItemEntity {
     private BigDecimal price;
     private String sku;
 
-    // Constructor con todos los atributos para crear objetos de la clase Item con los valores valores iniciales
     public ItemEntity(Long id, String name, String description, BigDecimal price, String sku) {
         this.id = id;
         this.name = name;
@@ -29,12 +24,9 @@ public class ItemEntity {
         this.sku = sku;
     }
 
-    // Constructor sin parámetros para crear objetos de la clase Item sin inicializar atributos
     public ItemEntity() {
     }
 
-    // Getters y Setters para acceder y modificar los atributos de la entidad
-    // Estos métodos son necesarios para que JPA pueda acceder a los atributos de la entidad
     public Long getId() {
         return id;
     }

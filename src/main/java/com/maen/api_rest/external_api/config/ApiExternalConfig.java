@@ -1,4 +1,4 @@
-package com.maen.api_rest.External_api.config;
+package com.maen.api_rest.external_api.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
